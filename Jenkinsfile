@@ -25,6 +25,7 @@ pipeline {
                 echo "Testing.."
                 sh '''
                 cd myapp
+                . .venv/bin/activate  # it used to activate the virtual environment with the installed dependencies
                 python3 hello.py
                 python3 hello.py --name=Zoz
                 '''
